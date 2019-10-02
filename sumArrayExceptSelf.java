@@ -17,17 +17,7 @@ public class sumArrayExceptSelf{
      */
     public static int [] sumArray(int [] arr){
 
-        int [] ans = new int[arr.length];
-        int num = 1;
-        ans[0] = num;
-        for(int i = 1; i < arr.length; i++){
-            ans[i] = ans[i - 1] * arr[i - 1];
-        }
-        for(int i = arr.length - 1; i >= 0;  i--){
-           ans[i] *= num;
-        num *= arr[i];
-        }
-        return ans;
+       
     }
 
 }
