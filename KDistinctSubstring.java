@@ -21,12 +21,17 @@ return max sum of the values from hashmap that are size k
         /**
         # of substrings = s.length()!
          */
-
+        /**
+        Given an integer k and a string s, find the length of the longest substring that contains at most k distinct characters.
+        @param s string to check for max substring of length k
+        @param k number of distinct characters a substring of s must have
+        INSIGHTS: k can be > s.length()
+         */
         public static int longestSubstring(String s, int k){
-       String sub;
+      String sub;
         if(s == null || s.isEmpty()) return 0;
             int max = Integer.MIN_VALUE;
-            for(int i = 0;  i < s.length(); i++){
+            for(int i = 0;  i <= s.length() - 1; i++){
                 for(int j = s.length(); j >= i; j--){
                     HashMap<Character, Integer> map = new HashMap<>();
                     sub = s.substring(i, j);    
@@ -47,6 +52,6 @@ return max sum of the values from hashmap that are size k
               
 
             }
-            return max;
+            return max == Integer.MIN_VALUE ? s.length() : max;
         }
  }
