@@ -8,8 +8,6 @@ public class Encode{
             while(i < s.length() && s.charAt(i) == c){
                 count++;
                 i++;
-
-
             }
             sb.append(count);
             sb.append(c);
